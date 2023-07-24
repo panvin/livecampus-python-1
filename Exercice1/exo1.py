@@ -18,8 +18,8 @@ def is_ipv4(input: str):
         for chunk in address_chunk:
             if not 0 <= int(chunk) <= 255:
                 return False
-            else:
-                return True
+        return True
+       
     except ValueError:
         return False
         
@@ -33,8 +33,8 @@ def is_ipv6(userInput: str):
         for chunk in address_chunk:
             if  not 0 <= int(chunk, 16) <= 65535:
                 return False
-            else:
-                return True
+        return True
+        
     except ValueError:
         return False
         
