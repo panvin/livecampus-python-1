@@ -75,7 +75,7 @@ def format_textfile_as_dict(path :str):
 def save_json( data: list[str], new_json_path: str) -> None:
     try:    
         with open(new_json_path, "w") as json_file:
-            content = json.dump(data, json_file)
+            json.dump(data, json_file)
     except OSError as error:
         print(f"Une erreur système est survenue lors du traitement du fichier: {error}.")
     except Exception as error:
