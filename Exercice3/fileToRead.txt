@@ -1,0 +1,6 @@
+%INFO: Your device has been connected to network though interface eth0
+%INFO: Your system boot on version 3.2.14
+%WARNING: Only 3% left on disk0:
+%ERROR: Not enough memory available on disk0:
+%INFO: Connection with database postgres-prod
+%ERROR: Not enough memory available on disk0: to save postgres-prod backup(s)

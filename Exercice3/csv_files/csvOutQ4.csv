@@ -1,0 +1,7 @@
+Ligne,Libellé
+1,%INFO: Your device has been connected to network though interface eth0
+2,%INFO: Your system boot on version 3.2.14
+3,%WARNING: Only 3% left on disk0:
+4,%ERROR: Not enough memory available on disk0:
+5,%INFO: Connection with database postgres-prod
+6,%ERROR: Not enough memory available on disk0: to save postgres-prod backup(s)
