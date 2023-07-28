@@ -3,11 +3,12 @@ import os
 
 class Bamboo():
 
-    def __init__(self, path: str):
+    def __init__(self, path: str, sheet :str = ""):
         self.path = path
         self.data = None
         self.dataFiltered = None
         self.fileExt = ""
+        self.sheet = sheet
         self.readFunction = {
             ".json":  pandas.read_json,
             ".html":  pandas.read_html,
@@ -37,7 +38,10 @@ class Bamboo():
     def read_file(self):
         self.__get_file_extension()      
         if self.isFileValid:
-            self.data = self.readFunction[self.fileExt](self.path)
+            if ".xlsx" == self.fileExt:
+                self.data = self.readFunction[self.fileExt](self.path, sheet_name = self.sheet) 
+            else:
+                self.data = self.readFunction[self.fileExt](self.path)
         else:
             print("Impossible de lire le fichier, le fichier en entrée n'est pas valide")
         return self.data
@@ -78,15 +82,3 @@ class Bamboo():
             print (f"Une erreur est survenue: {error}.")
         else:
             print("L'écriture du fichier s'est terminé sans problème")
-
-    
-
-         
-
-            
-        
-
-        
-
-    
-

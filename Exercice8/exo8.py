@@ -30,6 +30,7 @@ def main():
     dataTrue = dataObjForCsv.filter_dataframe('boolean', True)
     print(dataTrue)
     dataObjForCsv.save_data_filtered_as_csv(os.path.join(rootFile, "true.csv"))
+   
 
 if __name__ == "__main__":
     main()
